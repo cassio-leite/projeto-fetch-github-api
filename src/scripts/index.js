@@ -1,5 +1,6 @@
 import { getUser } from './services/user.js'
 import { getRepositories } from './services/repositories.js'
+import { getEvents } from './services/events.js'
 
 import { user } from './objects/user.js'
 import { screen } from './objects/screen.js'
@@ -37,9 +38,15 @@ async function getUserData(userName) {
     }
 
     const repositoriesResponse = await getRepositories(userName)
+    const eventsResponse = await getEvents(userName)
+
+    const filteredEvents = eventsResponse.filter(event =>
+        event.type === "PushEvent" || event.type === "CreatEvent"
+    ).slice(0,10)
 
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
+    user.setEvents(filteredEvents)
 
     screen.renderUser(user)
 }
