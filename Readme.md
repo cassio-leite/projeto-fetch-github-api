@@ -2,7 +2,7 @@
 
 Este projeto é uma aplicação web que permite buscar usuários do GitHub e exibir suas informações, como nome, bio e repositórios públicos.
 
-<img src="./src/images/Gif da tela inicial do projeto.gif" alt="Gif da tela inicial">
+<img src="./src/images/gif-gitHub.gif" alt="Gif da tela inicial">
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -15,9 +15,27 @@ Este projeto é uma aplicação web que permite buscar usuários do GitHub e exi
 - GitHub API
 
 ## 📂 Estrutura do Projeto
-
-<img src="./src/images/estrutura do projeto.png" alt="Imagem da estrutura do projeto">
-
+````
+src
+├── css
+│ ├── reset.css
+│ └── styles.css
+├── images
+│ ├── exemplo-imagem.png
+│ └── gif-gitHub.gif
+├── scripts
+│ ├── objects
+│ │ ├── screen.js
+│ │ └── user.js
+│ ├── services
+│ │ ├── events.js
+│ │ ├── repositories.js
+│ │ ├── user.js
+│ │ └── variables.js
+│ └── index.js
+├── index.html
+└── README.md
+````
 ## 🎯 Funcionalidades
 
 ✅ Busca de usuários pelo nome de usuário do GitHub✅ Exibição de informações do perfil (foto, nome e bio)✅ Listagem dos últimos repositórios públicos✅ Exibição de mensagem de erro caso o usuário não seja encontrado✅ Estilização responsiva para melhor experiência do usuário
